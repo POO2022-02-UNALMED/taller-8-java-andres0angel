@@ -41,15 +41,18 @@ public class Jugador extends Futbolista {
     
     @Override
     public int compareTo(Object jug){
-        Jugador ju=(Jugador) jug;{
-        int x= Math.abs(this.getEdad()-ju.getEdad());
-        
+        Jugador ju=(Jugador) jug;
+        int x=0;
+        if (this.getEdad()-ju.getEdad()>0){
+            x=this.getEdad()-ju.getEdad();
+        }else{
+            x= Math.abs(this.getEdad()-ju.getEdad());
+        }
         return x;
-    }
     }
     @Override
     public String toString() {
-        return super.toString() + " con el dorsal " + this.dorsal + ". Ha marcado " + this.dorsal;
+        return super.toString() + " con el dorsal " + this.dorsal + ". Ha marcado " + this.golesMarcados;
     }
     public boolean jugarConLasManos() {
         return false;
