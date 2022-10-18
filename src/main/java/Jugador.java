@@ -52,7 +52,7 @@ public class Jugador extends Futbolista {
     }
     @Override
     public String toString() {
-        return super.toString() + " con el dorsal " + dorsal + ". Ha marcado " + dorsal;
+        return super.toString() + " con el dorsal " + this.dorsal + ". Ha marcado " + this.dorsal;
     }
     public boolean jugarConLasManos() {
         return false;
